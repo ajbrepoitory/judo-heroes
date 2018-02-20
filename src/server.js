@@ -52,11 +52,12 @@ app.get('*', (req, res) => {
 });
 
 // start the server
-const port = process.env.PORT || 8080;
+//const port = process.env.PORT || 8080;
+const port = 8080;
 const env = process.env.NODE_ENV || 'production';
 server.listen(port, err => {
   if (err) {
     return console.error(err);
   }
-  console.info(`Server running on http://localhost:${port} [${env}]`);
+  console.info(`Server running on http://localhost:${port} [${env}] started at `+ new Date());
 });
